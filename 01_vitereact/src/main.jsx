@@ -34,7 +34,7 @@ const reactElement = React.createElement(
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 
-    reactElement
+    // reactElement
     // anotherElement
-    // <App/>
+    <App/>
 )
