@@ -1,9 +1,10 @@
-
+import Chai from "./Chai";
 function App() {
   return (
-    <div className="App">
-      <h1> Hello React | Shivam Singh </h1>
-    </div>
+    <>
+      <h1> Hello Shivam Singh | React </h1>
+      <Chai/>
+    </>
   );
 }
 export default App;
