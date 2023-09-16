@@ -1,9 +1,12 @@
+import Chai from "./Chai";
 
 function App() {
   return (
-    <div>
-      <h1>Hello Vite React | Shivam Singh</h1>
-    </div>
+    <>
+      <h1> Hello Shivam Singh  | Vite React </h1>
+      <Chai/>
+      <h4>Hello</h4>
+    </>
   );
 }
 export default App
