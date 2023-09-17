@@ -6,6 +6,7 @@ function App() {
   let [counter, setCounter]= useState(0)
   
   // let counter = 5
+  let show=0;
 
   const addValue = () => {
     if(counter == 20){
@@ -28,7 +29,14 @@ function App() {
       console.log(counter);
     }
   }
-
+  
+  // const display = (counter) => {
+  //   if(counter >= 10){
+  //     show = "9+"
+  //   }else{
+  //     show = counter
+  //   }
+  // }
 
   return (
     <>
