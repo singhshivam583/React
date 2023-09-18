@@ -51,7 +51,7 @@ function App() {
           onClick={copyPasswordToClipboard}
           className='outline-none bg-blue-700 text-center text-white px-3 py-1 shrink-0'>Copy</button>
         </div>
-        <div className='flex text-sm gap-x-1.5 '>
+        <div className='flex text-sm gap-x-1.5 shadow overflow-hidden'>
           <div className='flex items-center gap-x-1'>
             <input
               // onClick={passwordGenerator}
