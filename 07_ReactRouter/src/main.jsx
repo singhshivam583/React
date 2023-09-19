@@ -8,7 +8,7 @@ import About from './components/About/About'
 import Contact from './components/Contact/Contact'
 import { Route } from 'react-router-dom'
 import User from './components/User/User'
-import GitHub from './components/GitHub/GitHub'
+import GitHub, {githubInfoLoader} from './components/GitHub/GitHub'
 
 
 
