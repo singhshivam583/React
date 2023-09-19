@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Header from '../Header/Header'
-import Home from './Home'
+import Home from './components/Home/Home'
 import Footer from '../Footer/Footer'
 
 function App() {
@@ -9,9 +9,7 @@ function App() {
 
   return (
     <>
-      <Header/>
-      <Home/>
-      <Footer/>
+     
     </>
   )
 }
