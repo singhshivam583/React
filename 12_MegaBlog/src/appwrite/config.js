@@ -20,7 +20,7 @@ export class Services{
             return await this.databases.createDocument(
                 conf.appwriteDatabaseId,
                 conf.appwriteCollectionId,
-                // document id
+                // document id => slug
                 slug,                         
                 {
                     title,
@@ -101,7 +101,7 @@ export class Services{
             );
             return false;
         }
-        return false;
+        
     }
 
     // File related services 
@@ -145,4 +145,4 @@ export class Services{
 
 const services = new Services();
 
-export default services
+export default services 

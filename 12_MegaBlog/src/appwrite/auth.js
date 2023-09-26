@@ -1,6 +1,6 @@
 /* eslint-disable no-useless-catch */
 import conf from "../conf/conf";
-import { Account, Client, Databases, ID } from "appwrite";
+import { Account, Client, ID } from "appwrite";
 
 
 // const client = new Client()
