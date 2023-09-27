@@ -1,7 +1,6 @@
 function sum(a) {
     return function(b){
       if(!b){
-        console.log(b);
         return a;
       }
       return sum(a+b);
