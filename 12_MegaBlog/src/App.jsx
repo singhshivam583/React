@@ -11,9 +11,9 @@ function App() {
   const dispatch = useDispatch()
 
   useEffect(() =>{
-    authService.getCurrentUser
+    authService.getCurrentUser()
     .then((userData) => {
-      //      console.log('userdata:', userData);
+      console.log('userdata:', userData);
       if (userData){
         dispatch(login({userData}))
       }else{
@@ -30,7 +30,6 @@ function App() {
           <Header/>
           <main>
              TODO: <Outlet />
-            <p>abcd</p>
           </main>
           <Footer/>
       </div>
