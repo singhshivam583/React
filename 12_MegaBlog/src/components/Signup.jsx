@@ -1,34 +1,31 @@
 import React, {useState} from 'react'
 import authService from '../appwrite/auth'
-import {Link, useNavigate} from "react-router-dom"
+import {Link ,useNavigate} from 'react-router-dom'
 import {login} from '../store/authSlice'
-import {Button, Input, Logo} from './index'
-import { useDispatch } from 'react-redux'
-import { useForm } from 'react-hook-form'
+import {Button, Input, Logo} from './index.js'
+import {useDispatch} from 'react-redux'
+import {useForm} from 'react-hook-form'
 
-
-
-export default function Signup() {
-
+function Signup() {
     const navigate = useNavigate()
-    const [errorMsg, setErrorMsg] = useState('')
-    const [register, handleSubmit] = useForm()
+    const [error, setError] = useState("")
     const dispatch = useDispatch()
+    const {register, handleSubmit} = useForm()
 
-    const signup = async(data) => {
-        //  console.log("signup", data);
-        setErrorMsg('')
+    const create = async(data) => {
+        setError("")
         try {
             const userData = await authService.createAccount(data)
             if (userData) {
                 const userData = await authService.getCurrentUser()
-                if(userData) dispatch(login(userData))
-                navigate('/')
+                if(userData) dispatch(login(userData));
+                navigate("/")
             }
         } catch (error) {
-            setErrorMsg(error.message)
+            setError(error.message)
         }
     }
+
   return (
     <div className="flex items-center justify-center">
             <div className={`mx-auto w-full max-w-lg bg-gray-100 rounded-xl p-10 border border-black/10`}>
@@ -47,9 +44,9 @@ export default function Signup() {
                         Sign In
                     </Link>
                 </p>
-                {errorMsg && <p className="text-red-600 mt-8 text-center">{errorMsg}</p>}
+                {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
 
-                <form onSubmit={handleSubmit(signup)}>
+                <form onSubmit={handleSubmit(create)}>
                     <div className='space-y-5'>
                         <Input
                         label="Full Name: "
@@ -77,15 +74,15 @@ export default function Signup() {
                         {...register("password", {
                             required: true,})}
                         />
-                        <Button 
-                        type="submit" 
-                        className="w-full"
-                        >
+                        <Button type="submit" className="w-full">
                             Create Account
                         </Button>
                     </div>
                 </form>
             </div>
+
     </div>
   )
 }
+
+export default Signup
