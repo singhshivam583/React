@@ -6,7 +6,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   let myObj = {
-    username:"Shivam",
+    username:"Shivam Singh",
     age: 21
   }
 
@@ -16,7 +16,8 @@ function App() {
     <>
       <h1 className='bg-green-400 text-black p-4 rounded-xl'>Tailwind Test</h1>
       <Card btnText = 'click me'/>
-      <Card username = 'Shivam' />
+      <Card username = {myObj.username}/>
+      <Card username = "Shivam"/>
     </>
   )
 }

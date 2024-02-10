@@ -42,8 +42,10 @@ function App() {
     <>
       <h1>Chai aur React</h1>
       <h2>Counter Value : {counter}</h2>
-      <button onClick={addValue}>Add Value</button><br/>
+      <button onClick={addValue}>Add Value</button>
+      <br/>
       <button onClick={removeValue}>Remove Value </button>
+      <br/>
     </>
   )
 }

@@ -27,8 +27,8 @@ const anotherElement = (
 const username = " shivam"
 const reactElement = React.createElement(
     'a',                                              // at first always a tag is there 
-    {href: 'https://google.com', target:'_blank'},    // at second always a object is there which contains all the properties or arguments of that element
-    'Visit this Page',                                // at third always  the text is there
+    {href: 'https://google.com', target:'_blank'},    // at second a object is there which contains all the properties or arguments of that element
+    'Visit this Page',                                // at third the text is there
     username                                          // rest are variables that are evaluated expressions 
 ) 
 
