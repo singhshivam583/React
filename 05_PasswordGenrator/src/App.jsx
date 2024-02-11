@@ -53,7 +53,7 @@ function App() {
             Copy
           </button>
         </div>
-        <div className='flex text-sm gap-x-1.5 shadow overflow-hidden'>
+        <div className='flex text-sm gap-x-2 shadow overflow-hidden mb-4'>
           <div className='flex items-center gap-x-1'>
             <input
               // onClick={passwordGenerator}
@@ -64,7 +64,7 @@ function App() {
               className='cursor-pointer'
               onChange={(e) => {setLength(e.target.value)}}
             />
-            <lebel className='w-20'>Length : {length}</lebel>
+            <lebel className='w-20'>Length : ({length})</lebel>
           </div>
           <div className='flex items-center gap-x-1'>
             <input
@@ -82,21 +82,24 @@ function App() {
             <input
               // onClick={passwordGenerator}
               type='checkbox'
-              defaultChecked = {numAllowed}
-              id='numberInput'
-              onChange={() => {
-                setCharAllowed((prev) => !prev);
-              }}
+              defaultChecked = {charAllowed}
+              id='charInput'
+              // onChange={() => {
+              //   setCharAllowed((prev) => !prev);
+              // }}
+              onClick={() => setCharAllowed(!charAllowed)}
+
             />
             <lebel>Characters</lebel>
           </div>
-          <div className='flex items-center gap-x-1'>
+        </div>
+        <div className='flex items-center justify-center'>
             <button  
               onClick={passwordGenerator}
-              className='outline-none rounded-2xl bg-red-700 text-center text-white  px-0.5 shrink-0'>GEN
+              className='outline-none rounded-2xl bg-red-700 text-center text-white  px-0.5 shrink-0 px-4'>
+                Generate Password
             </button>
           </div>
-        </div>
       </div>
     </> 
   )

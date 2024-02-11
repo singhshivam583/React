@@ -8,16 +8,33 @@ function App() {
   // let counter = 5
   // let show=0;
 
+ // Intreview part
   const addValue = () => {
-    if(counter == 20){
-      setCounter(counter)
-      alert("This can't go above 20")
-    }else{
-      counter++
-      setCounter(counter)
-      console.log(counter);
-    }
+
+    // setCounter(counter+1)          // only update by because of  multiple time update on same value so it bundle the all batch and update after some time 
+    // setCounter(counter+1)
+    // setCounter(counter+1)
+    // setCounter(counter+1)
+
+    // solution: in setCounter we get callback 
+    // setCounter((c)=>c + 3)
+
+    setCounter((counter) => counter+1)      // it is like .then chaining 
+    setCounter(counter => counter+1)
+    setCounter(counter => counter+1)
+    setCounter(counter => counter+1)
   }
+
+  // const addValue = () => {
+  //   if(counter == 20){
+  //     setCounter(counter)
+  //     alert("This can't go above 20")
+  //   }else{
+  //     counter++
+  //     setCounter(counter)
+  //     console.log(counter);
+  //   }
+  // }
 
   const removeValue = () => {
     if(counter == 0){
