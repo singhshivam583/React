@@ -15,6 +15,7 @@ function App() {
             {
               colorArr.map((item) => 
                 <button 
+                  key={item}
                   className='outline-none text-white px-4 py-1 rounded-full'
                   style={{backgroundColor: item }}
                   onClick={()=>{setColor(item)}}>
